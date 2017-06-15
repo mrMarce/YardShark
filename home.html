@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>YardShark</title>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css" />
+
+	<link rel="stylesheet" type="text/css" href="homeStyle.css">
+</head>
+<body>
+
+ <nav class="navbar navbar-default navbar-invnavbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Open navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">YardShark</a>
+    </div>
+    <div id="navbar" class="collapse navbar-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#" class="signup">Signup  <i class="fa fa-user-plus"></i></a></li>
+        <li><a href="#about" id="login">Login  <i class="fa fa-user"></i></a></li>
+      </ul>
+    </div>
+  </div>
+ </nav>
+
+
+
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-lg-12">
+ 			<div class="content">
+ 				<h1 id='bigOne'>YardShark</h1>
+ 				<h3>The marketplace for freelance landscaping</h3>
+ 				<hr>
+ 				<button class="btn btn-default btn-lg signup" id="signup"><i class="fa"></i> Get Started!</button>
+ 			</div>
+ 		</div>
+ 	</div>
+ </div>
+
+ <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-database.js"></script>
+
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyBIoXOFrVzc0uh0ZQIceW4XK0rWiVx2d-4",
+     authDomain: "yardshark-e535b.firebaseapp.com",
+     databaseURL: "https://yardshark-e535b.firebaseio.com",
+     projectId: "yardshark-e535b",
+     storageBucket: "yardshark-e535b.appspot.com",
+     messagingSenderId: "563245234121"
+   };
+   firebase.initializeApp(config);
+ var bigOne = document.getElementById("bigOne");
+ var dbRef = firebase.database().ref().child('text');
+ dbRef.on('value', snap => bigOne.innerText = snap.val());
+
+ </script>
+
+
+ <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
+ <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="homeScript.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.min.js.map"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.js"></script>
+
+
+</body>
+</html>
