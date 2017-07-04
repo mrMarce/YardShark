@@ -5,8 +5,7 @@
    type = "text/css"
    href = "app.css" />
     <meta charset="utf-8">
-    <title></title>
-    <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
+   <title></title>   <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   </head>
   <body>
@@ -18,27 +17,25 @@
 
 
 
-    <form method="post" action="index.html">
-    <div class="box">
-    <h1>Dashboard</h1>
+    <!-- Trigger/Open The Modal -->
+    <button id="myBtn">Open Modal</button>
 
-    <input placeholder = "Email" type="email" id="emailF" name="email" onFocus="field_focus(this, 'email');" onblur="field_blur(this, 'email');" class="email" />
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-    <input placeholder="Password" type="password" id= "passwordF" name="password"  onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="password" />
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
+      </div>
 
-    <input placeholder="Confirm Password" type="password" id= "passConf" name="passConf" onFocus="field_focus(this, 'passConf');" onblur="field_blur(this, 'passConf');" class="password" />
+    </div>
 
-    <a href="#"><div class="btn" id="btn1">Sign In</div></a> <!-- End Btn -->
 
-    <a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
 
-    </div> <!-- End Box -->
 
-    </form>
 
-    <p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
-
-    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+  <script ssrc="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.min.js.map"></script>

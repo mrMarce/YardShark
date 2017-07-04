@@ -1,0 +1,54 @@
+h4{
+
+  font-weight: 700;
+	font-size: 5em;
+  color: white;
+  font-family: Lato;
+}
+
+.leaves{
+  background: url("https://images.unsplash.com/photo-1415273751003-8af20c760a51?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=");
+  text-align: center;
+
+}
+
+.grass{
+
+  background: url("https://images.unsplash.com/reserve/JjdWbOCTlemWMuvC0BeF_DSC_0867edit.jpg?dpr=1&auto=format&fit=crop&w=1500&h=1004&q=80&cs=tinysrgb&crop=&bg=");
+  text-align: center;
+  vertical-align:;
+
+
+}
+
+.snow{
+background: url("https://images.unsplash.com/photo-1492584115029-f633e64c61fa?dpr=1&auto=format&fit=crop&w=1080&h=810&q=80&cs=tinysrgb&crop=&bg=");
+text-align: center;
+vertical-align:;
+}
+
+
+
+.card{
+  margin: 0 auto;
+  margin-top: 5%;
+  float: none;
+  width: 50rem;
+  height: 30rem;
+  margin-left: 1%;
+  margin-right: 1%;
+  cursor:pointer;
+
+
+}
+
+
+
+.content{
+    padding:15%;
+  text-align: center;
+    text-shadow: 0px 4px 3px rgba(0,,0,0.4),
+                  0px 8px 13px rgba(0,0,0,0.1),
+                 0px 18px 23px rgba(0,0,0,0.1);
+}
+

@@ -1,51 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>YardShark</title>
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+	<title>GrassGuys</title>
+
+  <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.css" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.min.css" />
-
-	<link rel="stylesheet" type="text/css" href="homeStyle.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="homeStyle.css">
 </head>
 <body>
 
- <nav class="navbar navbar-default navbar-invnavbar-fixed-top">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-        <span class="sr-only">Open navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">YardShark</a>
-    </div>
-    <div id="navbar" class="collapse navbar-collapse">
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+<a class="navbar-brand" href="#">GrassGuys</a>
 
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#" class="signup">Signup  <i class="fa fa-user-plus"></i></a></li>
-        <li><a href="#about" id="login">Login  <i class="fa fa-user"></i></a></li>
-      </ul>
+<div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+
+  <ul class="nav navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="modal" data-target="#logInModal">Login</a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="#" data-toggle="modal" data-target="#signUpModal">Sign Up</a>
+    </li>
+  </ul>
+
+</div>
+</nav>
+<div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form class="form-signin">
+      <h2 class="form-signin-heading">Please login</h2>
+      <input type="email" id="email2"class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" id="password2" class="form-control" name="password" placeholder="Password" required=""/>
+
+      <button id="btn2" class="btn btn-lg btn-primary btn-block" type="button" onclick="logInUser()">Login</button>
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
     </div>
   </div>
- </nav>
+</div>
 
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+        <form class="form-signin">
+      <h2 class="form-signin-heading">Sign Up</h2>
+      <input type="text" id="email1" class="form-control" name="username" placeholder="Email Address" required="" autofocus="" />
+      <input type="password" id="password1" class="form-control" name="password" placeholder="Password" required=""/>
+      <input type="password" id="passConf1" class="form-control" name="passConf" placeholder="Confirm password" required=""/>
+
+
+
+      <button id="btn1" class="btn btn-lg btn-primary btn-block" type="button" onclick="signUpUser()">Sign up</button>
+    </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
  <div class="container">
- 	<div class="row">
- 		<div class="col-lg-12">
- 			<div class="content">
- 				<h1 id='bigOne'>YardShark</h1>
- 				<h3>The marketplace for freelance landscaping</h3>
- 				<hr>
- 				<button class="btn btn-default btn-lg signup" id="signup"><i class="fa"></i> Get Started!</button>
- 			</div>
- 		</div>
- 	</div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="content">
+        <h1 id='bigOne'>GrassGuys</h1>
+        <h3>The marketplace for freelance landscaping</h3>
+        <hr>
+        <button class="btn btn-default btn-lg signup" id="signup" data-toggle="modal" data-target="#signUpModal"><i class="fa"></i> Get Started!</button>
+      </div>
+    </div>
+  </div>
  </div>
 
  <script src="https://www.gstatic.com/firebasejs/4.1.2/firebase.js"></script>
@@ -62,15 +105,13 @@
      messagingSenderId: "563245234121"
    };
    firebase.initializeApp(config);
- var bigOne = document.getElementById("bigOne");
- var dbRef = firebase.database().ref().child('text');
- dbRef.on('value', snap => bigOne.innerText = snap.val());
+
 
  </script>
 
 
- <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.js"></script>
- <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
    <script type="text/javascript" src="homeScript.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/6.6.5/sweetalert2.common.min.js"></script>

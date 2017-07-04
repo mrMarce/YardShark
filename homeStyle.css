@@ -1,5 +1,5 @@
 body {
-    background: url(https://images.unsplash.com/photo-1458245201577-fc8a130b8829?dpr=1&auto=format&fit=crop&w=1080&h=715&q=80&cs=tinysrgb&crop=&bg=);
+    background: url("https://images.unsplash.com/photo-1415273751003-8af20c760a51?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=");
     background-size: cover;
     background-position: center;
 }
@@ -34,8 +34,24 @@ h3 {
                  0px 18px 23px rgba(0,0,0,0.1);
 }
 
+input{
+margin-bottom: 15px;
+
+}
+
 hr {
     width: 400px;
     border-top: 1px solid #f8f8f8;
     border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.modal-dialog {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: auto;
+  @media(max-width: 768px) {
+    min-height: calc(100vh - 20px);
+  }
 }

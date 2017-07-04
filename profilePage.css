@@ -1,0 +1,27 @@
+li{
+margin-left: 15px;
+
+}
+
+body{
+
+  background: url("https://images.unsplash.com/reserve/JjdWbOCTlemWMuvC0BeF_DSC_0867edit.jpg?dpr=1&auto=format&fit=crop&w=1500&h=1004&q=80&cs=tinysrgb&crop=&bg=");
+
+}
+
+.card{
+  margin: 0 auto;
+  margin-top: 5%;
+  float: none;
+  width: 50rem;
+}
+
+.btn {
+  position: absolute;
+  bottom: 1%;
+  right: 10px;
+}
+.card-img-top{
+
+  max-height: 50%;
+}
